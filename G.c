@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    if (n * 5 > 60)
-        printf("NO");
-    else
-        printf("YES");
-
-    return 0;
+int main(void) {
+	int x;
+	scanf("%d",&x);
+	if(x==17){
+	    printf("YAY\n");
+	}else{
+	    printf("NO\n");
+	}
 }
