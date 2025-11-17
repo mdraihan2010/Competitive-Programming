@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
-    int h;
-    scanf("%d", &h);
-
-    if (h < 8) {
-        printf("LESS\n");
+main()
+{
+    int t;
+    scanf("%d", & t);
+    while (t--)
+    {
+        int n, sum = 0, rem;
+        scanf("%d", & n);
+        while (n != 0)
+        {
+            rem = n % 10
+            sum += rem;
+            n /= 10;
+        }
+        printf("%d\n", sum);
     }
-    else if (h == 8) {
-        printf("PERFECT\n");
-    }
-    else {
-        printf("MORE\n");
-    }
-
-    return 0;
 }
