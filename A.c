@@ -1,23 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int t;
-    scanf("%d", &t);
+    int w;
+    scanf("%d", &w);
 
-    while (t--)
-        {
-        int a, b;
-        scanf("%d %d", &a, &b);
-
-        if (a > b) {
-            printf(">\n");
-        }
-        else if (a < b) {
-            printf("<\n");
-        }
-        else {
-            printf("=\n");
-        }
+    if (w % 2 == 1 || w == 2) {
+        printf("NO");
+    } else {
+        printf("YES");
     }
 
     return 0;
