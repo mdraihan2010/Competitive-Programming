@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int w;
-    scanf("%d", &w);
+    int x;
+    scanf("%d", &x);
 
-    if (w % 2 == 1 || w == 2) {
-        printf("NO");
+    if (x % 5 == 0) {
+        printf("%d\n", x / 5);
     } else {
-        printf("YES");
+        printf("%d\n", (x / 5) + 1);
     }
 
     return 0;
