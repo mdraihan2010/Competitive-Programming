@@ -1,13 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
-    int n, m;
-    scanf("%d %d", &n, &m);
-
-    if (n < m)
-        printf("YES\n");
-    else if (n == m)
-        printf("NO\n");
-
-    return 0;
+int main()
+{
+	int n,k,ans=0,i;
+	scanf("%d %d",&n,&k);
+	
+	for(i=0;i<n;i++)
+	{
+		int t;
+		scanf("%d",&t);
+		if(t%k==0)
+		{
+			ans++;
+		}
+	}
+	printf("%d",ans);
+	return 0;
 }
