@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int x;
-    scanf("%d", &x);
-
-    if (x == 17) {
-        printf("YAY\n");
-    } else {
-        printf("NO\n");
-    }
-
-    return 0;
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        int x,y;
+        scanf("%d%d",&x,&y);
+        if(x>=y)
+        printf("\nYES");
+        else
+        printf("\nNO"); }
+	
+	return 0;
 }
