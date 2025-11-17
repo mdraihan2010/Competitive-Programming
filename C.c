@@ -1,14 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    long long x, y;
-    scanf("%lld %lld", &x, &y);
-
-    if (x > y) {
-        printf("%lld\n", x - y);
-    } else {
-        printf("%lld\n", x + y);
-    }
-
-    return 0;
+	int t,n,m;
+	scanf("%d",&t);
+	while(t--){
+	    scanf("%d%d",&n,&m);
+	    printf("%d\n",n*2+m*4);
+	}
+	return 0;
 }
