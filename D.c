@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int T;
-    scanf("%d", &T);
+    int n, m;
+    scanf("%d %d", &n, &m);
 
-    while (T--) {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        printf("%d\n", a * 2 + b * 4);
-    }
+    if (n < m)
+        printf("YES\n");
+    else if (n == m)
+        printf("NO\n");
 
     return 0;
 }
