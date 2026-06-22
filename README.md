@@ -6,6 +6,7 @@ This repository contains my competitive programming solutions and problem-solvin
 
 - Input-Output-and-Condition
 - Loop
+- Array
 
 More topics will be added gradually.
 
