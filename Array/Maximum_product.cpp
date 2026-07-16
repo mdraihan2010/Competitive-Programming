@@ -1,23 +1,45 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n;
-    cin >> n;
+    int arr[100];
+    int i, j;
+    int temp;
+    int result1, result2;
 
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
 
-    sort(arr, arr + n);
+    /* Bubble Sort */
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
 
-    int result_1 = arr[n - 1] * arr[n - 2];
-    int result_2 = arr[0] * arr[1];
+    result1 = arr[n - 1] * arr[n - 2];
+    result2 = arr[0] * arr[1];
 
-    cout << max(result_1, result_2) << endl;
+    if (result1 > result2)
+    {
+        printf("%d\n", result1);
+    }
+    else
+    {
+        printf("%d\n", result2);
+    }
 
     return 0;
 }
