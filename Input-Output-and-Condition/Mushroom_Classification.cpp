@@ -1,22 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     double a;
-    cin >> a;
+
+    scanf("%lf", &a);
 
     if (a >= 9.0)
     {
-        cout << "VERY TOXIC" << endl;
+        printf("VERY TOXIC\n");
     }
     else if (a >= 5.0)
     {
-        cout << "TOXIC" << endl;
+        printf("TOXIC\n");
     }
     else
     {
-        cout << "SAFE" << endl;
+        printf("SAFE\n");
     }
 
     return 0;
