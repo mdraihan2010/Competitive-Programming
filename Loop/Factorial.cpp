@@ -1,13 +1,19 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main()
+{
     int n;
-    cin >> n;
+    int i;
     long long factorial = 1;
-    for (int i = 1; i <= n; i++) {
-        factorial *= i;
+
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        factorial = factorial * i;
     }
-    cout << factorial << endl;
+
+    printf("%lld\n", factorial);
+
     return 0;
 }
