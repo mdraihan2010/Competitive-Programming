@@ -1,21 +1,33 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main()
+{
     int arr[3];
-    for (int i = 0; i < 3; i++) {
-        cin >> arr[i];
+    int i;
+    int sml, big;
+
+    for (i = 0; i < 3; i++)
+    {
+        scanf("%d", &arr[i]);
     }
-    int sml = arr[0], big = arr[0];
-    for (int i = 1; i < 3; i++) {
-        if (arr[i] < sml) {
+
+    sml = arr[0];
+    big = arr[0];
+
+    for (i = 1; i < 3; i++)
+    {
+        if (arr[i] < sml)
+        {
             sml = arr[i];
         }
-        else if (arr[i] > big) {
+
+        if (arr[i] > big)
+        {
             big = arr[i];
         }
     }
-    cout << sml << " " << big << endl;
+
+    printf("%d %d\n", sml, big);
 
     return 0;
 }
