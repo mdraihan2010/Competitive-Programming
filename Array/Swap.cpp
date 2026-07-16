@@ -1,38 +1,42 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     int n, q;
-    cin >> n >> q;
+    int b[100];
+    int qx[100], qy[100];
+    int i;
+    int x, y;
+    int temp;
 
-    int b[n];
-    for (int i = 0; i < n; i++)
+    scanf("%d %d", &n, &q);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> b[i];
+        scanf("%d", &b[i]);
     }
 
-    int qx[q], qy[q];
-    for (int i = 0; i < q; i++)
+    for (i = 0; i < q; i++)
     {
-        cin >> qx[i] >> qy[i];
+        scanf("%d %d", &qx[i], &qy[i]);
     }
 
-    for (int i = q - 1; i >= 0; i--)
+    for (i = q - 1; i >= 0; i--)
     {
-        int x = qx[i] - 1;
-        int y = qy[i] - 1;
-        swap(b[x], b[y]);
+        x = qx[i] - 1;
+        y = qy[i] - 1;
+
+        temp = b[x];
+        b[x] = b[y];
+        b[y] = temp;
     }
 
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        cout << b[i] << " ";
+        printf("%d ", b[i]);
     }
-    cout << "\n";
+
+    printf("\n");
 
     return 0;
 }
