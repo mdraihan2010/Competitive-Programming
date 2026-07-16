@@ -1,15 +1,15 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     char s[105];
+    int i;
 
     scanf("%[^\n]", s);
 
-    for (int i = 0; i < 3; i++)
+    for (i = 0; i < 3; i++)
     {
-        cout << s << endl;
+        printf("%s\n", s);
     }
 
     return 0;
