@@ -1,11 +1,16 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <math.h>
 
 int main()
 {
     long long n;
-    cin >> n;
-    long long x = sqrt(n);
-    cout << x << endl;
+    long long x;
+
+    scanf("%lld", &n);
+
+    x = sqrt(n);
+
+    printf("%lld\n", x);
+
     return 0;
 }
