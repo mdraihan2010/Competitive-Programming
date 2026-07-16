@@ -1,18 +1,30 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     char a, b;
-    cin >> a >> b;
+    int diff;
 
-    char x = toupper(a);
-    char y = toupper(b);
+    scanf(" %c %c", &a, &b);
 
-    int m = x - 'A';
-    int n = y - 'A';
+    if (a >= 'a' && a <= 'z')
+    {
+        a = a - 32;
+    }
 
-    cout << abs(n - m) - 1 << endl;
+    if (b >= 'a' && b <= 'z')
+    {
+        b = b - 32;
+    }
+
+    diff = b - a;
+
+    if (diff < 0)
+    {
+        diff = diff * (-1);
+    }
+
+    printf("%d\n", diff - 1);
 
     return 0;
 }
