@@ -1,22 +1,28 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n;
-    cin >> n;
-    long long arr[n], count = 0;
-    for (int i = 0; i < n; i++)
+    int i;
+    long long arr[100];
+    long long count = 0;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        scanf("%lld", &arr[i]);
     }
-    for (int i = 0; i < n; i++)
+
+    for (i = 0; i < n; i++)
     {
         if (arr[i] % 2 == 0)
         {
-            count++;
+            count = count + 1;
         }
     }
-    cout << count << endl;
+
+    printf("%lld\n", count);
+
     return 0;
 }
