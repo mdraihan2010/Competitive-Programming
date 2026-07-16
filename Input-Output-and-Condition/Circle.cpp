@@ -1,16 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#define PI 3.141592653589793
 
 int main()
 {
     double r;
-    cin >> r;
+    double area, circumference;
 
-    const double PI = M_PI;
+    scanf("%lf", &r);
 
-    double area = PI * r * r;
-    double circumference = 2 * PI * r;
+    area = PI * r * r;
+    circumference = 2 * PI * r;
 
-    cout << fixed << setprecision(3) << circumference << " " << area << endl;
+    printf("%.3lf %.3lf\n", circumference, area);
+
     return 0;
 }
