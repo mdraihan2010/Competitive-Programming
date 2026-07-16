@@ -1,29 +1,48 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int n, sum = 0;
-    cin >> n;
-    int arr[n + 1];
-    for (int i = 1; i <= n; i++)
-    {
-        cin >> arr[i];
-        sum += arr[i];
-    }
+    int n;
+    int arr[100];
+    int i;
+    int sum = 0;
     int x, y;
-    cin >> x >> y;
+    int path1 = 0;
+    int path2;
+
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        scanf("%d", &arr[i]);
+        sum = sum + arr[i];
+    }
+
+    scanf("%d %d", &x, &y);
+
     if (x > y)
     {
-        swap(x, y);
+        int temp;
+        temp = x;
+        x = y;
+        y = temp;
     }
-    int path_1 = 0;
-    for (int i = x; i < y; i++)
+
+    for (i = x; i < y; i++)
     {
-        path_1 += arr[i];
+        path1 = path1 + arr[i];
     }
-    int path_2 = sum - path_1;
-    cout << min(path_1, path_2) << endl;
+
+    path2 = sum - path1;
+
+    if (path1 < path2)
+    {
+        printf("%d\n", path1);
+    }
+    else
+    {
+        printf("%d\n", path2);
+    }
 
     return 0;
 }
