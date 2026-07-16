@@ -1,32 +1,36 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-
     int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int i;
+    int arr[100];
+    int mx, mn;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
-    int mx = arr[0];
-    for (int i = 1; i < n; i++)
+
+    mx = arr[0];
+    mn = arr[0];
+
+    for (i = 1; i < n; i++)
     {
         if (arr[i] > mx)
         {
             mx = arr[i];
         }
-    }
-    int mn = arr[0];
-    for (int i = 1; i < n; i++)
-    {
+
         if (arr[i] < mn)
         {
             mn = arr[i];
         }
     }
-    cout << mx << " " << mn << endl;
+
+    printf("%d %d\n", mx, mn);
+
     return 0;
 }
