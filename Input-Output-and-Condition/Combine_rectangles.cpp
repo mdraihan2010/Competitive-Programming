@@ -1,14 +1,19 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
-    int a,b,c,d;
-    cin >> a >> b >> c >>d;
-    if(a==c || a==d || b==c || b==d ){
-        cout << "YES" << endl;
+int main()
+{
+    int a, b, c, d;
+
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    if (a == c || a == d || b == c || b == d)
+    {
+        printf("YES\n");
     }
-    else{
-        cout << "NO" << endl;
+    else
+    {
+        printf("NO\n");
     }
+
     return 0;
 }
