@@ -1,18 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
+    int n;
+    int i;
+
     long long a = 0;
     long long b = 1;
-    long long next_term = 0; 
-    int n;
-    cin >> n;
+    long long next_term = 0;
 
-    for (int i = 0; i <= n; i++)
+    scanf("%d", &n);
+
+    for (i = 0; i <= n; i++)
     {
         if (i <= 1)
+        {
             next_term = i;
+        }
         else
         {
             next_term = a + b;
@@ -21,7 +25,7 @@ int main()
         }
     }
 
-    cout << next_term << endl;
+    printf("%lld\n", next_term);
 
     return 0;
 }
