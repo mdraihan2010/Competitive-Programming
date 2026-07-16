@@ -1,15 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     long long s;
-    cin >> s;
-    long long h = s / 3600;
-    s %= 3600;
-    long long m = s / 60;
-    s %= 60;
-    long long ss = s % 60;
-    cout << h << " " << m << " " << ss << endl;
+    long long h, m, ss;
+
+    scanf("%lld", &s);
+
+    h = s / 3600;
+    s = s % 3600;
+
+    m = s / 60;
+    s = s % 60;
+
+    ss = s;
+
+    printf("%lld %lld %lld\n", h, m, ss);
+
     return 0;
 }
