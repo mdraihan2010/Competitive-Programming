@@ -1,7 +1,8 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
-    cout << "Hello Marisa!" << endl;
+int main()
+{
+    printf("Hello Marisa!\n");
+
     return 0;
 }
