@@ -1,17 +1,24 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    long long a, b, sm = 0, rem;
-    cin >> a >> b;
-    long long sum = a + b;
+    long long a, b;
+    long long sum;
+    long long sm = 0;
+    long long rem;
+
+    scanf("%lld %lld", &a, &b);
+
+    sum = a + b;
+
     while (sum != 0)
     {
         rem = sum % 10;
         sm = sm * 10 + rem;
-        sum /= 10;
+        sum = sum / 10;
     }
-    cout << sm << endl;
+
+    printf("%lld\n", sm);
+
     return 0;
 }
