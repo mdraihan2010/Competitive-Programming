@@ -1,25 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n;
-    cin >> n;
+    int arr[100];
+    int i;
 
-    int arr[n + 1];
-    for (int i = 1; i <= n; i++)
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
     {
-        cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
 
-    for (int i = n; i >= 1; i--)
+    for (i = n; i >= 1; i--)
     {
         if (i % 2 != 0)
         {
-            cout << arr[i] << " ";
+            printf("%d ", arr[i]);
         }
     }
 
-    cout << endl;
+    printf("\n");
+
     return 0;
 }
