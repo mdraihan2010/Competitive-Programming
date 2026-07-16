@@ -1,14 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main()
+{
     int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            cout << "*";
+    int i, j;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = i; j < n; j++)
+        {
+            printf("*");
         }
-        cout << endl;
+
+        printf("\n");
     }
+
     return 0;
 }
