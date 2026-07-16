@@ -1,21 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b, c;
-    cin >> a >> b >> c;
+
+    scanf("%d %d %d", &a, &b, &c);
+
     if (a == b)
     {
-        cout << c << endl;
+        printf("%d\n", c);
     }
     else if (b == c)
     {
-        cout << a << endl;
+        printf("%d\n", a);
     }
     else
     {
-        cout << b << endl;
+        printf("%d\n", b);
     }
+
     return 0;
 }
