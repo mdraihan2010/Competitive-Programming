@@ -1,16 +1,24 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main()
+{
     int n;
-    cin >> n;
-    int arr[n+1];
-    for (int i = 1; i <= n; i++)
+    int arr[100];
+    int i;
+    int mx;
+    int pos;
+
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
     {
-        cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
-    int mx = arr[1],pos = 1;
-    for (int i = 1; i <= n; i++)
+
+    mx = arr[1];
+    pos = 1;
+
+    for (i = 1; i <= n; i++)
     {
         if (arr[i] > mx)
         {
@@ -18,6 +26,8 @@ int main() {
             pos = i;
         }
     }
-    cout << mx << " " << pos << endl;
+
+    printf("%d %d\n", mx, pos);
+
     return 0;
 }
