@@ -1,18 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    long long n;
-    cin >> n;
-    long long x = sqrt(n);
+    long long n, x;
+
+    scanf("%lld", &n);
+
+    x = sqrt(n);
+
     if (x * x == n)
     {
-        cout << "YES" << endl;
+        printf("YES\n");
     }
     else
     {
-        cout << "NO" << endl;
+        printf("NO\n");
     }
+
     return 0;
 }
