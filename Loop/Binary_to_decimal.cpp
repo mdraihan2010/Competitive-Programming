@@ -1,23 +1,26 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     long long n;
-    cin >> n;
-
     long long decimal = 0;
     long long base = 1;
+    int last_digit;
+
+    scanf("%lld", &n);
 
     while (n > 0)
     {
-        int last_digit = n % 10;
-        decimal += last_digit * base;
+        last_digit = n % 10;
+
+        decimal = decimal + (last_digit * base);
+
         base = base * 2;
+
         n = n / 10;
     }
 
-    cout << decimal << endl;
+    printf("%lld\n", decimal);
 
     return 0;
 }
