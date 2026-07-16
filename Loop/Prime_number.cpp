@@ -1,19 +1,28 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main()
+{
     int n;
-    cin >> n;
-    if(n <= 1) {
-        cout << "NO" << endl;
+    int i;
+
+    scanf("%d", &n);
+
+    if (n <= 1)
+    {
+        printf("NO\n");
         return 0;
     }
-    for (int i = 2; i < n; i++) {
-        if (n % i == 0) {
-            cout << "NO" << endl;
+
+    for (i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            printf("NO\n");
             return 0;
         }
     }
-    cout << "YES" << endl;
+
+    printf("YES\n");
+
     return 0;
 }
