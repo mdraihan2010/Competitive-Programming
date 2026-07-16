@@ -1,17 +1,19 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b, c;
-    cin >> a >> b >> c;
+
+    scanf("%d %d %d", &a, &b, &c);
+
     if (a + b > c && b + c > a && c + a > b)
     {
-        cout << "YES" << endl;
+        printf("YES\n");
     }
     else
     {
-        cout << "NO" << endl;
+        printf("NO\n");
     }
+
     return 0;
 }
