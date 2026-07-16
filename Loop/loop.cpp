@@ -1,11 +1,16 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
-    int l,r;
-    cin >> l >>r;
-    for (int i = l; i <= r; i++) {
-        cout << i << " ";
+int main()
+{
+    int l, r;
+    int i;
+
+    scanf("%d %d", &l, &r);
+
+    for (i = l; i <= r; i++)
+    {
+        printf("%d ", i);
     }
+
     return 0;
 }
