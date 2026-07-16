@@ -1,17 +1,24 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int n, sum = 0;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int n;
+    int arr[100];
+    int i;
+    int sum = 0;
+    double average;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> arr[i];
-        sum += arr[i];
+        scanf("%d", &arr[i]);
+        sum = sum + arr[i];
     }
-    double average = (double)sum / n;
-    cout << fixed << setprecision(3) << average << endl;
+
+    average = (double)sum / n;
+
+    printf("%.3lf\n", average);
+
     return 0;
 }
