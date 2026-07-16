@@ -1,21 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b, c, x, y, z;
-    cin >> a >> b >> c >> x >> y >> z;
+    int first_person_days, second_person_days;
 
-    int first_person_days = (c * 365) + (b * 30) + a;
-    int second_person_days = (z * 365) + (y * 30) + x;
+    scanf("%d %d %d %d %d %d", &a, &b, &c, &x, &y, &z);
+
+    first_person_days = (c * 365) + (b * 30) + a;
+    second_person_days = (z * 365) + (y * 30) + x;
 
     if (first_person_days < second_person_days)
     {
-        cout << "1" << endl;
+        printf("1\n");
     }
     else
     {
-        cout << "2" << endl;
+        printf("2\n");
     }
 
     return 0;
