@@ -1,22 +1,24 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b, k;
-    cin >> a >> b >> k;
-
-    int remainder = a % b;
+    int remainder;
     int digit = 0;
+    int i;
 
-    for (int i = 1; i <= k; i++)
+    scanf("%d %d %d", &a, &b, &k);
+
+    remainder = a % b;
+
+    for (i = 1; i <= k; i++)
     {
         remainder = remainder * 10;
         digit = remainder / b;
         remainder = remainder % b;
     }
 
-    cout << digit << endl;
+    printf("%d\n", digit);
 
     return 0;
 }
