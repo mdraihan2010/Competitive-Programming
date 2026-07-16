@@ -1,27 +1,28 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b;
-    cin >> a >> b;
+    int ans;
+
+    scanf("%d %d", &a, &b);
 
     if (a == 0 && b == 0)
     {
-        cout << "INFINITE SOLUTIONS" << endl;
+        printf("INFINITE SOLUTIONS\n");
     }
     else if (a == 0)
     {
-        cout << "NO SOLUTION" << endl;
+        printf("NO SOLUTION\n");
     }
     else if ((-b) % a != 0)
     {
-        cout << "NO SOLUTION" << endl;
+        printf("NO SOLUTION\n");
     }
     else
     {
-        int ans = (-b) / a;
-        cout << ans << endl;
+        ans = (-b) / a;
+        printf("%d\n", ans);
     }
 
     return 0;
