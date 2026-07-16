@@ -1,26 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int x, a, b, c, d;
-    cin >> x >> a >> b >> c >> d;
+
+    scanf("%d %d %d %d %d", &x, &a, &b, &c, &d);
+
     if (x <= 50)
     {
-        cout << x * a << endl;
+        printf("%d\n", x * a);
     }
     else if (x <= 100)
     {
-
-        cout << 50 * a + (x - 50) * b << endl;
+        printf("%d\n", 50 * a + (x - 50) * b);
     }
     else if (x <= 150)
     {
-        cout << 50 * a + 50 * b + (x - 100) * c << endl;
+        printf("%d\n", 50 * a + 50 * b + (x - 100) * c);
     }
     else
     {
-        cout << 50 * a + 50 * b + 50 * c + (x - 150) * d << endl;
+        printf("%d\n", 50 * a + 50 * b + 50 * c + (x - 150) * d);
     }
+
     return 0;
 }
