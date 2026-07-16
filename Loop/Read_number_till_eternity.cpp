@@ -1,17 +1,20 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     long long n;
-    while (cin >> n)
+    long long result;
+
+    while (scanf("%lld", &n) == 1)
     {
         if (n == 0)
         {
             break;
         }
-        long long result = n * n * n * n * n;
-        cout << result << endl;
+
+        result = n * n * n * n * n;
+
+        printf("%lld\n", result);
     }
 
     return 0;
