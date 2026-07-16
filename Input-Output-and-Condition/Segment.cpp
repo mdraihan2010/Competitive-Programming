@@ -1,21 +1,37 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int a, b, c, d;
-    cin >> a >> b >> c >> d;
+    int start, end;
 
-    int start = max(a, c);
-    int end = min(b, d);
+    scanf("%d %d %d %d", &a, &b, &c, &d);
 
-    if (start <= end)
+    if (a > c)
     {
-        cout << "YES" << endl;
+        start = a;
     }
     else
     {
-        cout << "NO" << endl;
+        start = c;
+    }
+
+    if (b < d)
+    {
+        end = b;
+    }
+    else
+    {
+        end = d;
+    }
+
+    if (start <= end)
+    {
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
     }
 
     return 0;
