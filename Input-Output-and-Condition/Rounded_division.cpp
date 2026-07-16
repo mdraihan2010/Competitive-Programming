@@ -1,9 +1,12 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
-int main() {
-    double a,b;
-    cin >>a>>b;
-    cout<< fixed << setprecision(2) << (double)a/b << endl;
+int main()
+{
+    double a, b;
+
+    scanf("%lf %lf", &a, &b);
+
+    printf("%.2lf\n", a / b);
+
     return 0;
 }
