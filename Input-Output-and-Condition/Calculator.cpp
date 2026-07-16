@@ -1,38 +1,39 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     double a, b;
     char x;
-    cin >> a >> x >> b;
-    cout << fixed << setprecision(3);
+
+    scanf("%lf %c %lf", &a, &x, &b);
+
     if (x == '+')
     {
-        cout << a + b << endl;
+        printf("%.3lf\n", a + b);
     }
     else if (x == '-')
     {
-        cout << a - b << endl;
+        printf("%.3lf\n", a - b);
     }
     else if (x == '*')
     {
-        cout << a * b << endl;
+        printf("%.3lf\n", a * b);
     }
     else if (x == '/')
     {
         if (b != 0)
         {
-            cout << a / b << endl;
+            printf("%.3lf\n", a / b);
         }
         else
         {
-            cout << "ze" << endl;
+            printf("ze\n");
         }
     }
     else
     {
-        cout << "ze" << endl;
+        printf("ze\n");
     }
+
     return 0;
 }
