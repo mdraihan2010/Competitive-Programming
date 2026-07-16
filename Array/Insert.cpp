@@ -1,37 +1,41 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n, q;
-    cin >> n >> q;
-
     int arr[305];
-    for (int i = 0; i < n; i++)
+    int i, j;
+    int pos, val;
+    int target_idx;
+
+    scanf("%d %d", &n, &q);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
 
-    while (q--)
+    for (i = 0; i < q; i++)
     {
-        int pos, val;
-        cin >> pos >> val;
+        scanf("%d %d", &pos, &val);
 
-        int target_idx = pos - 1;
+        target_idx = pos - 1;
 
-        for (int i = n; i > target_idx; i--)
+        for (j = n; j > target_idx; j--)
         {
-            arr[i] = arr[i - 1];
+            arr[j] = arr[j - 1];
         }
 
         arr[target_idx] = val;
-        n++;
 
-        for (int i = 0; i < n; i++)
+        n = n + 1;
+
+        for (j = 0; j < n; j++)
         {
-            cout << arr[i] << " ";
+            printf("%d ", arr[j]);
         }
-        cout << endl;
+
+        printf("\n");
     }
 
     return 0;
