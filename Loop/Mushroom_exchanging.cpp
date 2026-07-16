@@ -1,25 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n, k;
-    cin >> n >> k;
     int days = 0;
     int stems = 0;
 
+    scanf("%d %d", &n, &k);
+
     while (n > 0)
     {
-        n--;
-        stems++;
-        days++;
+        n = n - 1;
+        stems = stems + 1;
+        days = days + 1;
+
         if (stems == k)
         {
-            n++;
+            n = n + 1;
             stems = 0;
         }
     }
-    cout << days << endl;
+
+    printf("%d\n", days);
 
     return 0;
 }
