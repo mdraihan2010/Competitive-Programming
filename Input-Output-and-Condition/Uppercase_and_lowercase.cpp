@@ -1,20 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     char n;
-    cin >> n;
+
+    scanf(" %c", &n);
+
     if (n >= 'A' && n <= 'Z')
     {
-        n = tolower(n);
-        cout << n << endl;
+        n = n + 32;
     }
     else
     {
-        n = toupper(n);
-        cout << n << endl;
+        n = n - 32;
     }
+
+    printf("%c\n", n);
 
     return 0;
 }
