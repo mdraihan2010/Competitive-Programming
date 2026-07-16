@@ -1,29 +1,62 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n;
-    cin >> n;
-    int a[n], b[n];
-    for (int i = 0; i < n; i++)
+    int a[100], b[100];
+    int i, j;
+    int temp;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
     {
-        cin >> a[i];
+        scanf("%d", &a[i]);
     }
-    for (int i = 0; i < n; i++)
+
+    for (i = 0; i < n; i++)
     {
-        cin >> b[i];
+        scanf("%d", &b[i]);
     }
-    sort(a, a + n);
-    sort(b, b + n);
-    for (int i = 0; i < n; i++)
+
+    /* Bubble Sort for Array a */
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    /* Bubble Sort for Array b */
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (b[j] > b[j + 1])
+            {
+                temp = b[j];
+                b[j] = b[j + 1];
+                b[j + 1] = temp;
+            }
+        }
+    }
+
+    for (i = 0; i < n; i++)
     {
         if (a[i] != b[i])
         {
-            cout << "NO" << endl;
+            printf("NO\n");
             return 0;
         }
     }
-    cout << "YES" << endl;
+
+    printf("YES\n");
+
     return 0;
 }
